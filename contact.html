@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact — Talk to Hendrix Health | NZ partner for Heidi</title>
+  <meta name="description" content="Tell us about your practice or service. We reply within one working day. Or self-route by region to one of our three NZ field client partners.">
+  <meta name="theme-color" content="#0F7C7B">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Hendrix Health">
+  <meta property="og:description" content="Talk to the team about bringing Heidi into your practice.">
+  <meta property="og:url" content="https://hendrix.health/contact">
+  <meta property="og:image" content="assets/img/og/og-contact.png">
+
+  <link rel="icon" href="assets/img/logo-hendrix.png" type="image/png">
+
+  <script>
+    try {
+      if (sessionStorage.getItem('hh_seen') === '1') {
+        document.documentElement.classList.add('reveals-off');
+      }
+      sessionStorage.setItem('hh_seen', '1');
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,30..100&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/js/nav.js"></script>
+  <script defer src="assets/js/form.js"></script>
+  <script defer src="assets/js/reveal.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__brand" aria-label="Hendrix Health home">
+        <span class="site-header__brand-mark"><img src="assets/img/logo-hendrix.png" alt="" width="30" height="30"></span>
+        <span>Hendrix&nbsp;Health</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="heidi.html">Heidi platform</a>
+        <a href="implementation.html">Implementation</a>
+        <a href="safety.html">Safety &amp; privacy</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a href="#form" class="btn btn--primary site-header__cta">Book a Heidi demo <span class="arrow">→</span></a>
+      <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="mobile-sheet" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-sheet" id="mobile-sheet" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="heidi.html">Heidi platform</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="safety.html">Safety &amp; privacy</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://pulse.hendrix.health/" rel="noopener">The Pulse ↗</a>
+    <a href="#form" class="btn btn--primary btn--lg">Book a Heidi demo</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ─── Page hero ────────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Talk to Hendrix.</h1>
+        <p class="page-hero__subtitle">
+          Tell us about your practice, hospital, or service. We reply within one working
+          day &mdash; usually faster &mdash; from a local client partner who can take it
+          forward from there.
+        </p>
+      </div>
+    </section>
+
+    <!-- ─── What happens next ───────────────────────────────────── -->
+    <section class="section section--tight">
+      <div class="container container--narrow">
+        <div class="section-head">
+          <span class="eyebrow">What happens next</span>
+          <h2>No high-pressure sales call.</h2>
+          <p>One short conversation, a clear written recommendation, and a decision you can take back to your team.</p>
+        </div>
+
+        <ol class="steps" data-reveal>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">We reply within one working day.</div>
+              <p class="steps__body">From your local client partner — usually faster.</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">A 20-minute readiness conversation.</div>
+              <p class="steps__body">We ask about your team, systems, consult types, and what success would look like for you.</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">A short demo, if helpful.</div>
+              <p class="steps__body">Heidi running on a real consult, in your specialty. Q&amp;A with the people who'd actually use it.</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">A written rollout recommendation.</div>
+              <p class="steps__body">Plan, training mix, timeline, patient-comms pack, pricing pathway. Yours to review without us in the room.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ─── Form + contact methods ──────────────────────────────── -->
+    <section class="section" id="form">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Form: posts JSON to data-endpoint, falls back to mailto if no
+               endpoint is configured (or the request fails). Wire the
+               endpoint to your n8n / HubSpot / CRM webhook in one place. -->
+          <form class="form"
+                data-contact-form
+                data-endpoint=""
+                data-mailto="hello@hendrix.health"
+                novalidate>
+
+            <div class="form__row">
+              <div class="form__field" data-validate="required">
+                <label class="form__label" for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+                <input class="form__input" id="name" name="name" type="text" autocomplete="name" required aria-required="true" aria-describedby="name-err">
+                <div class="form__error" id="name-err">Please tell us your name.</div>
+              </div>
+              <div class="form__field" data-validate="required">
+                <label class="form__label" for="role">Your role <span class="req" aria-hidden="true">*</span></label>
+                <input class="form__input" id="role" name="role" type="text" placeholder="GP, Practice Manager, CIO…" required aria-required="true" aria-describedby="role-err">
+                <div class="form__error" id="role-err">Please tell us your role.</div>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__field" data-validate="required">
+                <label class="form__label" for="organisation">Organisation <span class="req" aria-hidden="true">*</span></label>
+                <input class="form__input" id="organisation" name="organisation" type="text" autocomplete="organization" required aria-required="true" aria-describedby="org-err">
+                <div class="form__error" id="org-err">Please tell us where you work.</div>
+              </div>
+              <div class="form__field" data-validate="required">
+                <label class="form__label" for="sector">Sector <span class="req" aria-hidden="true">*</span></label>
+                <select class="form__select" id="sector" name="sector" required aria-required="true" aria-describedby="sector-err">
+                  <option value="">Choose a sector…</option>
+                  <option>General practice</option>
+                  <option>Hospital / specialist</option>
+                  <option>Allied health</option>
+                  <option>Aged care</option>
+                  <option>Mental health</option>
+                  <option>Veterinary</option>
+                  <option>Other</option>
+                </select>
+                <div class="form__error" id="sector-err">Please pick a sector.</div>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__field" data-validate="required email">
+                <label class="form__label" for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input class="form__input" id="email" name="email" type="email" inputmode="email" autocomplete="email" required aria-required="true" aria-describedby="email-err">
+                <div class="form__error" id="email-err">Please give us a valid email so we can reply.</div>
+              </div>
+              <div class="form__field">
+                <label class="form__label" for="phone">Phone <span style="color: var(--ink-mute); font-weight: 400; font-size: var(--fs-xs);">(optional)</span></label>
+                <input class="form__input" id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="form__field">
+              <label class="form__label">What are you interested in? <span style="color: var(--ink-mute); font-weight: 400; font-size: var(--fs-xs);">(pick any)</span></label>
+              <div class="form__chips" role="group" aria-label="Areas of interest">
+                <label><input type="checkbox" name="interest" value="Small pilot" data-intent="pilot"> Start with a small pilot</label>
+                <label><input type="checkbox" name="interest" value="Heidi demo" data-intent="demo"> Heidi demo</label>
+                <label><input type="checkbox" name="interest" value="Pricing & plans" data-intent="pricing"> Pricing &amp; plans</label>
+                <label><input type="checkbox" name="interest" value="Training & rollout" data-intent="training"> Training &amp; rollout</label>
+                <label><input type="checkbox" name="interest" value="Privacy & consent" data-intent="privacy"> Privacy &amp; consent</label>
+                <label><input type="checkbox" name="interest" value="Existing Heidi user — support" data-intent="existing"> I already use Heidi</label>
+                <label><input type="checkbox" name="interest" value="Hospital / enterprise deployment" data-intent="enterprise"> Hospital / enterprise</label>
+                <label><input type="checkbox" name="interest" value="Patient communication pack" data-intent="patient"> Patient pack</label>
+                <label><input type="checkbox" name="interest" value="Other" data-intent="other"> Other</label>
+              </div>
+            </div>
+
+            <div class="form__field" data-validate="required">
+              <label class="form__label" for="message">A few lines about your team <span class="req" aria-hidden="true">*</span></label>
+              <textarea class="form__textarea" id="message" name="message" rows="5" placeholder="Team size, PMS/EHR, what you're hoping to do, any timeline pressure." required aria-required="true" aria-describedby="msg-err"></textarea>
+              <div class="form__error" id="msg-err">A short note helps us route you to the right person.</div>
+            </div>
+
+            <div class="form__success" role="status">
+              <strong>Thanks &mdash; your message is in.</strong><br>
+              We'll come back to you within one working day from a local client partner. If you don't hear from us, drop a line directly to <a href="mailto:hello@hendrix.health" style="color: var(--accent-deep); font-weight: 600;">hello@hendrix.health</a>.
+            </div>
+
+            <div class="form__server-error" role="alert" hidden></div>
+
+            <div class="cluster">
+              <button type="submit" class="btn btn--primary btn--lg">Send to Hendrix <span class="arrow">→</span></button>
+              <a href="mailto:hello@hendrix.health" class="linkout">or email us directly</a>
+            </div>
+
+            <p class="form__note">
+              We aim to come back to you within one working day. Your details are sent to our team
+              and are never shared with third parties. See the <a href="safety.html">privacy approach</a>.
+            </p>
+          </form>
+
+          <!-- Right column -->
+          <aside class="stack-lg" aria-label="Contact details">
+            <div class="contact-method">
+              <h3>General enquiries</h3>
+              <div class="contact-method__line"><a href="mailto:hello@hendrix.health">hello@hendrix.health</a></div>
+              <p>Sales, partnerships, training, and anything else.</p>
+            </div>
+            <div class="contact-method">
+              <h3>Founders</h3>
+              <div class="contact-method__line"><a href="mailto:florian@hendrix.health">florian@hendrix.health</a></div>
+              <p>Florian Stroehle, Co-founder &amp; CEO.</p>
+            </div>
+            <div class="contact-method">
+              <h3>The Pulse</h3>
+              <div class="contact-method__line"><a href="https://pulse.hendrix.health/" rel="noopener">pulse.hendrix.health</a></div>
+              <p>Our weekly newsletter on AI in NZ healthcare.</p>
+            </div>
+
+            <div class="territories">
+              <h3>Where we work</h3>
+              <ul>
+                <li><b>Upper North Island</b><span>Auckland → Bay of Plenty</span></li>
+                <li><b>Lower North Island</b><span>Wellington → Hawke's Bay</span></li>
+                <li><b>South Island</b><span>Nelson → Invercargill</span></li>
+                <li><b>National</b><span>Vets &amp; Allied Health</span></li>
+              </ul>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Field client partners ────────────────────────────────── -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Self-route by region</span>
+          <h2>Or talk to a client partner directly.</h2>
+          <p>Our three field client partners cover the country by territory and vertical. Reach out to whichever fits your practice.</p>
+        </div>
+
+        <div class="grid grid--3" data-reveal>
+          <article class="product-card">
+            <div class="team-card__tile" aria-hidden="true" style="aspect-ratio: 1/1; max-width: 88px; border-radius: var(--r-md);">
+              <span class="team-card__initials" style="font-size: 1.6rem;">CK</span>
+            </div>
+            <h3 class="product-card__name" style="margin-top: var(--s-4);">Carmela Kendrick-Jones</h3>
+            <p class="product-card__desc">
+              <strong>Upper North Island</strong> &mdash; GPs, specialists, dentists. Auckland, Waikato, Bay of Plenty, Northland.
+            </p>
+            <a href="mailto:carmela@hendrix.health" class="linkout">Email Carmela</a>
+          </article>
+
+          <article class="product-card">
+            <div class="team-card__tile" aria-hidden="true" style="aspect-ratio: 1/1; max-width: 88px; border-radius: var(--r-md);">
+              <span class="team-card__initials" style="font-size: 1.6rem;">SM</span>
+            </div>
+            <h3 class="product-card__name" style="margin-top: var(--s-4);">Sarah Manig</h3>
+            <p class="product-card__desc">
+              <strong>National</strong> &mdash; vets and allied health. Physio, OT, audiology, psychology, veterinary practices nationwide.
+            </p>
+            <a href="mailto:sarah@hendrix.health" class="linkout">Email Sarah</a>
+          </article>
+
+          <article class="product-card">
+            <div class="team-card__tile" aria-hidden="true" style="aspect-ratio: 1/1; max-width: 88px; border-radius: var(--r-md);">
+              <span class="team-card__initials" style="font-size: 1.6rem;">SF</span>
+            </div>
+            <h3 class="product-card__name" style="margin-top: var(--s-4);">Shay Franklin</h3>
+            <p class="product-card__desc">
+              <strong>Lower NI &amp; South Island</strong> &mdash; aged care and audiology. Wellington, Hawke's Bay, Christchurch, and the South Island.
+            </p>
+            <a href="mailto:shay@hendrix.health" class="linkout">Email Shay</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA banner ───────────────────────────────────────────── -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: rgba(255,255,255,.85);">Already know what you need?</span>
+          <h2>Skip the form. Book a 20-minute readiness review.</h2>
+          <p>One conversation with a local client partner. We'll map plan, pricing, training mix, and the right shape of rollout for your practice.</p>
+          <div class="cluster" style="justify-content: center; margin-top: var(--s-3);">
+            <a href="mailto:hello@hendrix.health?subject=Heidi%20readiness%20review" class="btn btn--inverse btn--lg">Book a readiness review <span class="arrow">→</span></a>
+            <a href="implementation.html" class="btn btn--ghost btn--lg" style="border-color: rgba(255,255,255,.4); color: var(--paper);">See how rollout works</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <div class="site-footer__brand-line">
+            <img src="assets/img/logo-hendrix.png" alt="" width="28" height="28">
+            <span>Hendrix Health</span>
+          </div>
+          <p class="site-footer__tagline">The official New Zealand partner for Heidi. Bringing AI into <span lang="mi">Aotearoa</span>'s clinics with confidence.</p>
+        </div>
+        <div class="site-footer__col">
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="heidi.html">Heidi platform</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="safety.html">Safety &amp; privacy</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://pulse.hendrix.health/" rel="noopener">The Pulse</a></li>
+            <li><a href="https://www.heidihealth.com" rel="noopener">Heidi global</a></li>
+            <li><a href="safety.html#patient-comms">Patient communication pack</a></li>
+            <li><a href="heidi.html#integrations">EHR integrations</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@hendrix.health">hello@hendrix.health</a></li>
+            <li><a href="tel:+64223254030">+64 22 325 4030</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Hendrix Health Ltd.</span>
+        <span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

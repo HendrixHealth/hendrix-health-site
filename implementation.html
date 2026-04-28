@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Implementation &amp; training — How a Heidi rollout works | Hendrix Health</title>
+  <meta name="description" content="What a Heidi rollout looks like with Hendrix. Five stages — Discover, Prepare, Train, Go live, Optimise — with the practical work, training, and patient communication that makes adoption stick.">
+  <meta name="theme-color" content="#0F7C7B">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Implementation &amp; training — Hendrix Health">
+  <meta property="og:description" content="The five-stage rollout we run for every NZ practice and hospital adopting Heidi.">
+  <meta property="og:url" content="https://hendrix.health/implementation">
+  <meta property="og:image" content="assets/img/og/og-home.png">
+
+  <link rel="icon" href="assets/img/logo-hendrix.png" type="image/png">
+
+  <script>
+    try {
+      if (sessionStorage.getItem('hh_seen') === '1') {
+        document.documentElement.classList.add('reveals-off');
+      }
+      sessionStorage.setItem('hh_seen', '1');
+    } catch (e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,30..100&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script defer src="assets/js/nav.js"></script>
+  <script defer src="assets/js/reveal.js"></script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__brand" aria-label="Hendrix Health home">
+        <span class="site-header__brand-mark"><img src="assets/img/logo-hendrix.png" alt="" width="30" height="30"></span>
+        <span>Hendrix&nbsp;Health</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="heidi.html">Heidi platform</a>
+        <a href="implementation.html" aria-current="page">Implementation</a>
+        <a href="safety.html">Safety &amp; privacy</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary site-header__cta">Talk to us <span class="arrow">→</span></a>
+      <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="mobile-sheet" aria-label="Open menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-sheet" id="mobile-sheet" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="heidi.html">Heidi platform</a>
+    <a href="implementation.html">Implementation</a>
+    <a href="safety.html">Safety &amp; privacy</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://pulse.hendrix.health/" rel="noopener">The Pulse ↗</a>
+    <a href="contact.html" class="btn btn--primary btn--lg">Talk to us</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ─── Page hero ────────────────────────────────────────────── -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Implementation &amp; training</span>
+        <h1>What a Heidi rollout actually looks&nbsp;like.</h1>
+        <p class="page-hero__subtitle">
+          Adopting an AI scribe is a workflow change, not a software install.
+          We run a five-stage rollout for every NZ team, covering clinical, operational
+          and patient-facing needs, so adoption is safe, calm and sticks past month one.
+        </p>
+        <div class="cluster" style="margin-top: var(--s-7);">
+          <a href="contact.html?intent=pilot" class="btn btn--primary btn--lg">Start with a small pilot <span class="arrow">→</span></a>
+          <a href="#journey" class="btn btn--ghost btn--lg">See the five stages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Sub-nav ──────────────────────────────────────────────── -->
+    <div class="subnav">
+      <div class="container">
+        <nav class="subnav__inner" aria-label="On this page">
+          <a href="#journey">The five stages</a>
+          <a href="#deliverables">What you receive</a>
+          <a href="#training">Role-based training</a>
+          <a href="#sectors">By sector</a>
+          <a href="#pilot">Start with a pilot</a>
+          <a href="#what-next">What happens next</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ─── Journey ─────────────────────────────────────────────── -->
+    <section class="section section--alt" id="journey">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The Hendrix rollout</span>
+          <h2>Five stages. Run end-to-end by your client&nbsp;partner.</h2>
+          <p>Every clinic is different, but the shape of a successful rollout isn't. This is what we do for a typical NZ practice or hospital service.</p>
+        </div>
+
+        <ol class="journey" data-reveal>
+          <li class="journey__stage">
+            <div class="journey__name">Discover</div>
+            <p class="journey__body">A short call to understand your team, consult types, PMS/EHR, patient communication needs, and what success looks like for you.</p>
+            <div class="journey__meta">Week 0 · 30 min</div>
+          </li>
+          <li class="journey__stage">
+            <div class="journey__name">Prepare</div>
+            <p class="journey__body">We set up templates, brief reception, share patient-facing material, line up an internal champion, and walk through the privacy approach.</p>
+            <div class="journey__meta">Week 1 · async + 1 huddle</div>
+          </li>
+          <li class="journey__stage">
+            <div class="journey__name">Train</div>
+            <p class="journey__body">Role-specific training for clinicians, practice managers, and reception. Live, recorded, and reusable for new joiners.</p>
+            <div class="journey__meta">Week 1–2 · 60–90 min/role</div>
+          </li>
+          <li class="journey__stage">
+            <div class="journey__name">Go live</div>
+            <p class="journey__body">A nominated client partner is on hand for the first week, solving snags, adjusting templates and helping the team build confidence.</p>
+            <div class="journey__meta">Week 2 · live support</div>
+          </li>
+          <li class="journey__stage">
+            <div class="journey__name">Optimise</div>
+            <p class="journey__body">Check-ins at 30 / 60 / 90 days. Template refinement, usage review, new-feature briefings, and follow-up training as the team grows.</p>
+            <div class="journey__meta">Ongoing · quarterly</div>
+          </li>
+        </ol>
+
+        <div class="callout" style="margin-top: var(--s-7);" data-reveal>
+          <span class="callout__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M5 19l3-3"/><circle cx="12" cy="12" r="4"/></svg>
+          </span>
+          <div>
+            <h3 class="callout__title">A real rollout is rarely linear.</h3>
+            <p class="callout__body">
+              Our five stages are a frame, not a fixed schedule. Some practices want to start with a single GP and grow from there. Some hospital services run all five stages in parallel across multiple sites. Your client partner adjusts the cadence to your team, not the other way around.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── What you receive ────────────────────────────────────── -->
+    <section class="section" id="deliverables">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What you receive</span>
+          <h2>The tangible deliverables. Not just a relationship.</h2>
+          <p>Every Hendrix-supported rollout produces these, written, downloadable and yours to keep. Your client partner walks you through each one.</p>
+        </div>
+
+        <ul class="deliverables" data-reveal>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Rollout plan</div>
+              <p class="deliverable__desc">A written plan you can take to your team and review without us in the room.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Training schedule</div>
+              <p class="deliverable__desc">Sessions per role, with dates, owners, and a recorded library for new joiners.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Clinician quick-start guide</div>
+              <p class="deliverable__desc">A one-pager for the desk. The 80% of Heidi most clinicians use, on a single sheet.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Patient communication pack</div>
+              <p class="deliverable__desc">Waiting-room poster, take-home leaflet, and a drop-in copy block for your website.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Reception FAQ</div>
+              <p class="deliverable__desc">Consistent answers to patient questions, so anyone who picks up the phone is at ease.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Consent script</div>
+              <p class="deliverable__desc">A short script clinicians can adapt, with variations for sensitive consults.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Template setup support</div>
+              <p class="deliverable__desc">Hendrix-built starter templates for your specialty, refined to your team's preferences.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">30 / 60 / 90-day check-ins</div>
+              <p class="deliverable__desc">Scheduled reviews of usage, friction points, and template tweaks. Plus a quarterly thereafter.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Pricing &amp; procurement guidance</div>
+              <p class="deliverable__desc">The right plan for your team, with help on procurement, BAA/DPA, and supplier paperwork.</p>
+            </div>
+          </li>
+          <li class="deliverable">
+            <span class="deliverable__check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <div>
+              <div class="deliverable__name">Named client partner</div>
+              <p class="deliverable__desc">One person on our side, by name, who knows your practice. The same one over time.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── Role-based training ─────────────────────────────────── -->
+    <section class="section section--alt" id="training">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Training that lifts the whole team</span>
+          <h2>Role-specific. Recorded. Reusable for new joiners.</h2>
+          <p>We don't drop a single 60-minute session on the team and hope. Each role gets training pitched at the work they actually do.</p>
+        </div>
+
+        <div class="grid grid--2" data-reveal>
+          <article class="case">
+            <span class="case__sector">Clinicians</span>
+            <h3 class="case__title">From first consult to comfortable in 1 week.</h3>
+            <p class="case__body">
+              Live walkthrough, a practice consult with a real recording, and a starter template library tailored to your specialty. Quick reference card for the desk. We follow up in week two to refine notes and templates.
+            </p>
+          </article>
+          <article class="case">
+            <span class="case__sector">Practice managers</span>
+            <h3 class="case__title">The operational pieces, sorted.</h3>
+            <p class="case__body">
+              Setup of templates and team accounts, patient-facing material for the waiting room and website, a briefing for reception, an internal champion, and clear answers for the privacy questions you'll be asked.
+            </p>
+          </article>
+          <article class="case">
+            <span class="case__sector">Reception &amp; front-of-house</span>
+            <h3 class="case__title">Consistent answers to patient questions.</h3>
+            <p class="case__body">
+              A short briefing and a one-pager so anyone who picks up the phone can confidently explain what Heidi is, that consent matters, and that recordings aren't kept. Patients notice when reception is at ease.
+            </p>
+          </article>
+          <article class="case">
+            <span class="case__sector">CIO / clinical leads (enterprise)</span>
+            <h3 class="case__title">Governance, security, and adoption metrics.</h3>
+            <p class="case__body">
+              Procurement support, privacy impact assessment templates, a deployment plan tailored to your sites, and a reporting cadence that gives clinical and digital leadership the same view of how things are landing.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── By sector ────────────────────────────────────────────── -->
+    <section class="section" id="sectors">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">By sector</span>
+          <h2>What rollout looks like for your kind of team.</h2>
+          <p>Three illustrative shapes of rollout. Your client partner will tailor the work to your practice.</p>
+        </div>
+
+        <div class="case-grid" data-reveal>
+          <article class="case">
+            <span class="case__sector">General practice</span>
+            <h3 class="case__title">A 4-GP clinic, live in two&nbsp;weeks.</h3>
+            <p class="case__body">
+              Discovery call, templates set up against your PMS, training across two evenings, and a client partner on hand during the first week of go-live. Reception is briefed before any patient asks.
+            </p>
+            <p class="case__attrib"><b>Typical timeline:</b> 14 days · <b>Roles trained:</b> 4 clinicians · 2 PMs · 3 reception</p>
+          </article>
+
+          <article class="case">
+            <span class="case__sector">Hospital service / ED</span>
+            <h3 class="case__title">A multi-site service, in&nbsp;phases.</h3>
+            <p class="case__body">
+              Pilot one site, capture lessons, then phase across the wider service with a clinical lead per site. Training delivered in shift-friendly blocks. Reporting back to digital and clinical leadership monthly.
+            </p>
+            <p class="case__attrib"><b>Typical timeline:</b> 6–12 weeks per service · <b>Largest deployment:</b> Health NZ ED rollout, all 38 public EDs</p>
+          </article>
+
+          <article class="case">
+            <span class="case__sector">Allied health &amp; specialist</span>
+            <h3 class="case__title">Single practitioners and small teams.</h3>
+            <p class="case__body">
+              For physio, audiology, psychology, dental and similar: a one-on-one walkthrough, templates tuned to your consult shape, and a 30-day follow-up. Often live in under a week.
+            </p>
+            <p class="case__attrib"><b>Typical timeline:</b> 3–7 days · <b>Sectors covered:</b> physio · OT · audiology · psychology · vets · dental</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Start with a pilot (cautious-buyer CTA) ─────────────── -->
+    <section class="section section--alt" id="pilot">
+      <div class="container">
+        <div class="pilot-band" data-reveal>
+          <div class="pilot-band__intro">
+            <span class="eyebrow">For cautious teams</span>
+            <h2 class="pilot-band__title">
+              Not ready for a full rollout? <em>Start with a small pilot.</em>
+            </h2>
+            <p class="pilot-band__sub">
+              One or two willing clinicians, a couple of weeks, no procurement paperwork.
+              We'll set you up, train your pilot team, and walk through what we learn together
+              before you decide whether to go wider.
+            </p>
+            <ul class="pilot-band__list" aria-label="What's included in a pilot">
+              <li>1–2 clinicians</li>
+              <li>2–4 weeks</li>
+              <li>No long contract</li>
+              <li>Hendrix support throughout</li>
+              <li>Written debrief</li>
+            </ul>
+          </div>
+          <div class="pilot-band__action">
+            <a href="contact.html?intent=pilot" class="btn btn--primary btn--lg">Start a small pilot <span class="arrow">→</span></a>
+            <a href="contact.html" class="linkout">Or just book a 20-minute call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── What happens next ───────────────────────────────────── -->
+    <section class="section" id="what-next">
+      <div class="container container--narrow">
+        <div class="section-head">
+          <span class="eyebrow">After you reach out</span>
+          <h2>What happens next.</h2>
+          <p>No high-pressure sales call. A short conversation, a clear plan, and a recommendation you can take back to your team.</p>
+        </div>
+
+        <ol class="steps" data-reveal>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">We reply within one working day.</div>
+              <p class="steps__body">From your local client partner, usually faster.</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">A 20-minute readiness conversation.</div>
+              <p class="steps__body">We ask about your team, systems, consult types, and what success would look like for you. No demo unless you want one.</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">A short demo, if helpful.</div>
+              <p class="steps__body">Heidi running on a real consult, in your specialty. Followed by a Q&amp;A with the people who'd actually use it.</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">A written rollout recommendation.</div>
+              <p class="steps__body">Plan, training mix, timeline, patient-communication pack, pricing pathway. Written so your team can review without you in the room.</p>
+            </div>
+          </li>
+          <li class="steps__item">
+            <div>
+              <div class="steps__title">You decide. We support, in or out.</div>
+              <p class="steps__body">If now isn't the right time, we'll say so. If it is, your client partner runs the rollout end-to-end.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ─── FAQ ──────────────────────────────────────────────────── -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section-head">
+          <span class="eyebrow">Common questions</span>
+          <h2>Rollout questions we hear most.</h2>
+        </div>
+
+        <div class="faq" data-reveal>
+          <details class="faq__item">
+            <summary class="faq__q">How long does a typical rollout take?</summary>
+            <div class="faq__a">
+              <p>For a single GP practice, two weeks is typical from kick-off to confident daily use. Hospital services usually run in phases over 6–12 weeks per service. Allied health and specialist solo practitioners can be live within a few days.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">Can we start with a small pilot?</summary>
+            <div class="faq__a">
+              <p>We recommend it for most teams. Starting with one or two willing clinicians, capturing what works and rolling forward from there is usually faster and calmer than a big-bang launch.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">What training do you actually run?</summary>
+            <div class="faq__a">
+              <p>Live sessions tailored to each role: clinicians get a hands-on walkthrough with a practice consult; practice managers get setup, templates, and patient-comms; reception gets a short briefing and a one-pager. Sessions are recorded so new joiners can self-onboard.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">Will Heidi work with our PMS / EHR?</summary>
+            <div class="faq__a">
+              <p>Heidi works with the major NZ practice management systems either through copy-paste or, where available, deeper integration. We confirm what's possible for your specific setup during the discovery call. <a href="heidi.html#integrations">See current integrations</a>.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">What ongoing support do we get?</summary>
+            <div class="faq__a">
+              <p>Check-ins at 30, 60, and 90 days, then quarterly. Template refinement and follow-up training as your team changes. New Heidi features are walked through with you when they land. Your client partner stays the same person over time.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">Who handles patient communication?</summary>
+            <div class="faq__a">
+              <p>You do, but we make it easy. We provide a waiting-room poster, a plain-language patient explainer, an FAQ for reception, and a short consent script clinicians can adapt. Read more on <a href="safety.html">Safety &amp; privacy</a>.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__q">What does it cost?</summary>
+            <div class="faq__a">
+              <p>Heidi has plans for individuals, small teams, and larger organisations. Hendrix's job is to help you choose the right fit, factor in training and rollout, and walk through procurement if your organisation needs it. <a href="contact.html">Get NZ pricing guidance</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA ──────────────────────────────────────────────────── -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow" style="color: rgba(255,255,255,.85);">Ready when you are</span>
+          <h2>Start small, or plan the full rollout.</h2>
+          <p>One conversation with a local client partner. We'll map the right plan, the right training mix, and the right pace for your team. No high-pressure sales.</p>
+          <div class="cluster" style="justify-content: center; margin-top: var(--s-3);">
+            <a href="contact.html?intent=pilot" class="btn btn--inverse btn--lg">Start with a small pilot <span class="arrow">→</span></a>
+            <a href="contact.html" class="btn btn--ghost btn--lg" style="border-color: rgba(255,255,255,.4); color: var(--paper);">Book a readiness call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <div class="site-footer__brand-line">
+            <img src="assets/img/logo-hendrix.png" alt="" width="28" height="28">
+            <span>Hendrix Health</span>
+          </div>
+          <p class="site-footer__tagline">The official New Zealand partner for Heidi. Bringing AI into <span lang="mi">Aotearoa</span>'s clinics with confidence.</p>
+        </div>
+        <div class="site-footer__col">
+          <h4>Sitemap</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="heidi.html">Heidi platform</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="safety.html">Safety &amp; privacy</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://pulse.hendrix.health/" rel="noopener">The Pulse</a></li>
+            <li><a href="https://www.heidihealth.com" rel="noopener">Heidi global</a></li>
+            <li><a href="safety.html#patient-comms">Patient communication pack</a></li>
+            <li><a href="heidi.html#integrations">EHR integrations</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@hendrix.health">hello@hendrix.health</a></li>
+            <li><a href="tel:+64223254030">+64 22 325 4030</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <span>© 2026 Hendrix Health Ltd. Made in <span lang="mi">Aotearoa</span> New Zealand.</span>
+        <span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
